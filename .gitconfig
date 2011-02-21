@@ -1,0 +1,13 @@
+[user]
+        name = Alexey Osipenko
+        email = aratak@anahoret.com
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        interactive = auto
+[alias]
+        st = status
+        ci = commit
+        co = checkout
+        br = branch

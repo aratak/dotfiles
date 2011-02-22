@@ -1,6 +1,5 @@
+require 'rubygems' unless defined? Gem # rubygems is only needed in 1.8
+require 'irbtools/configure'
+Irbtools.railsrc = File.expand_path('.railsrc', '~')
+Irbtools.init
 
-IRB.conf[:PROMPT_MODE] = :SIMPLE
-
-def show_sql
-  ActiveRecord::Base.logger = Logger.new(STDOUT)
-end

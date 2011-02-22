@@ -4,6 +4,14 @@ export PATH=/usr/local/mysql/bin:$PATH
 export PATH=$HOME/jruby/bin:$PATH
 export BUNDLER_EDITOR=mate `$BUNDLER_EDITOR`
 
+# don't put duplicate lines in the history. See bash(1) for more options
+export HISTCONTROL=ignoredups
+# ... and ignore same sucessive entries.
+export HISTCONTROL=ignoreboth
+
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000
+
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi

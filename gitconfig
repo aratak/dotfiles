@@ -2,6 +2,7 @@
         name = Alexey Osipenko
         email = aratak@anahoret.com
 [color]
+        ui = auto
         diff = auto
         status = auto
         branch = auto

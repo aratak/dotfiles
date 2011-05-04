@@ -11,3 +11,9 @@ Wirb.schema.merge!(
   :regexp => :light_red,
   :comma  => :white
 )
+
+FancyIrb.options.merge!(
+  :colorize => {
+    :stdout => :white
+  }
+)

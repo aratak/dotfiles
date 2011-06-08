@@ -12,3 +12,4 @@
         ci = commit
         co = checkout
         br = branch
+        tree = log --graph --decorate --all --oneline --abbrev-commit

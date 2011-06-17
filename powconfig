@@ -1,1 +1,1 @@
-export POW_RVM_PATH=/Users/aratak/.rvm/bin/rvm
+export POW_DOMAINS=dev,test

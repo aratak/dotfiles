@@ -1,8 +1,9 @@
 export ARCHFLAGS="-arch x86_64"
+# ~/.profile: executed by the command interpreter for login shells.
+# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login exists.
 
-export PATH=/usr/local/mysql/bin:$PATH
-export PATH=$HOME/jruby/bin:$PATH
-export BUNDLER_EDITOR=mate `$BUNDLER_EDITOR`
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
+export BUNDLER_EDITOR=mate
 
 # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups

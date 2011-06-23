@@ -26,6 +26,7 @@ PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;33m\]\w\[\033[00m\]\[\033[01;31m
 
 alias gitx='gitx --all'
 alias ruby='ruby -rubygems'
+alias be='bundle exec'
 alias preset='bundle exec rake project:reset && bundle exec rake project:add_test_data'
 alias wip='bundle exec cucumber -p wip'
 

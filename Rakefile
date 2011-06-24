@@ -1,7 +1,7 @@
 require 'fileutils'
 
 def dotfiles
-  ['gitconfig', 'irbrc', 'profile', 'railsrc', 'powconfig', 'gemrc']
+  ['gitconfig', 'irbrc', 'profile', 'railsrc', 'powconfig', 'gemrc', 'rails.bash']
 end
 
 def parse_files

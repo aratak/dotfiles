@@ -49,3 +49,4 @@ complete -o default -o nospace -F _git_branch gb
 complete -o default -o nospace -F _git_checkout gco
 complete -o default -o nospace -F _git_diff gk
 
+source ~/.rails.bash

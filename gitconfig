@@ -31,10 +31,10 @@
   tree = !git la --oneline
 [core]
   excludesfile = <%= ENV['HOME'] %>/.gitignore
-  editor = mate -w
-  autocrlf = input
+  editor = mvim -w
+  autocrlf = false
   safecrlf = true
 [apply]
-  whitespace = nowarn
+  whitespace = error trailing-space tab-in-indent cr-at-eol
 [format]
   pretty = format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset

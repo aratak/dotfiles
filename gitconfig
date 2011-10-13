@@ -31,7 +31,7 @@
   tree = !git la --oneline
 [core]
   excludesfile = <%= ENV['HOME'] %>/.gitignore
-  editor = mvim -w
+  editor = vim -f
   autocrlf = false
   safecrlf = true
 [apply]

@@ -28,6 +28,7 @@ alias gitx='gitx --all'
 alias ruby='ruby -rubygems'
 alias be='bundle exec'
 alias wip='bundle exec cucumber -p wip'
+alias please='sudo'
 
 # Custom git aliases
 alias ga='git add'

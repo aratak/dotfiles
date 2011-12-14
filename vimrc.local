@@ -4,3 +4,9 @@ autocmd BufWritePre * :%s/\s\+$//e
 
  map <F1> <Esc>
 imap <F1> <Esc>
+
+" Capfile is Ruby
+au BufRead,BufNewFile {Capfile}    set ft=ruby
+
+" thor files are Ruby
+au BufRead,BufNewFile {*.thor}     set ft=ruby

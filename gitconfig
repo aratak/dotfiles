@@ -30,7 +30,7 @@
   la = !git l --all
   tree = !git la --oneline
 [core]
-  excludesfile = <%= ENV['HOME'] %>/.gitignore
+  excludesfile = /Users/aratak/.gitignore_global
   editor = vim -f
   autocrlf = false
   safecrlf = true

@@ -11,8 +11,6 @@ imap <C-l> <Space>=><Space>
 " imap <M-LEFT-S-Enter> <Up><End><Enter>
 imap <S-Enter> <End><Enter>
 
-" Capfile is Ruby
-au BufRead,BufNewFile {Capfile}    set ft=ruby
-
-" thor files are Ruby
-au BufRead,BufNewFile {*.thor}     set ft=ruby
+au BufRead,BufNewFile {Capfile}      set ft=ruby
+au BufRead,BufNewFile {*.thor}       set ft=ruby
+au BufRead,BufNewFile {Jakefile}     set ft=javascript

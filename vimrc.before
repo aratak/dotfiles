@@ -2,7 +2,8 @@ let g:user_zen_expandabbr_key = '<c-e>'
 let g:use_zen_complete_tag = 1
 autocmd BufWritePre * :%s/\s\+$//e
 
- map! <F1> <Esc>
+  map <F1> <Esc>
+ imap <F1> <Esc>
 
 " insert => by Ctrl+L
 imap <C-l> <Space>=><Space>
@@ -14,3 +15,4 @@ imap <S-Enter> <End><Enter>
 au BufRead,BufNewFile {Capfile}      set ft=ruby
 au BufRead,BufNewFile {*.thor}       set ft=ruby
 au BufRead,BufNewFile {Jakefile}     set ft=javascript
+

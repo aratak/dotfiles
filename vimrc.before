@@ -15,4 +15,5 @@ imap <S-Enter> <End><Enter>
 au BufRead,BufNewFile {Capfile}      set ft=ruby
 au BufRead,BufNewFile {*.thor}       set ft=ruby
 au BufRead,BufNewFile {Jakefile}     set ft=javascript
+au BufRead,BufNewFile {*.jst}        set ft=html
 

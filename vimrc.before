@@ -9,8 +9,11 @@ autocmd BufWritePre * :%s/\s\+$//e
 imap <C-l> <Space>=><Space>
 
 " contol+enter -- new line
-" imap <M-LEFT-S-Enter> <Up><End><Enter>
-imap <S-Enter> <End><Enter>
+ map <F2> :echo 'Current time is ' . strftime('%c')<CR>
+ map <D-M-Left> <C-W><Left>
+ map <D-M-Right> <C-W><Right>
+ map <D-M-Up> <C-W><Up>
+ map <D-M-Down> <C-W><Down>
 
 au BufRead,BufNewFile {Capfile}      set ft=ruby
 au BufRead,BufNewFile {*.thor}       set ft=ruby

@@ -1,7 +1,7 @@
 require 'fileutils'
 
 def dotfiles
-  %w{gitconfig profile gemrc}
+  %w{gitconfig profile gemrc gitignore_global}
 end
 
 def source_file_path(filename)

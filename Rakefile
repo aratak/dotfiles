@@ -1,7 +1,7 @@
 require 'fileutils'
 
 def dotfiles
-  %w{gitconfig profile gemrc gitignore_global}
+  %w{gitconfig zshrc gemrc gitignore_global}
 end
 
 def source_file_path(filename)
@@ -17,6 +17,6 @@ task :default => :install
 desc "Copy dotfiles to my home directory"
 task :install do
   dotfiles.each do |filename|
-    ln_s source_file_path(filename), dotfile_home_path(filename), :verbose => true
+    ln_s source_file_path(filename), dotfile_home_path(filename), :verbose => true, :force => true
   end
 end

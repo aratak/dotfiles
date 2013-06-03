@@ -42,3 +42,5 @@
   autosetuprebase = always
 [push]
   default = current
+[credential]
+	helper = cache --timeout=86400

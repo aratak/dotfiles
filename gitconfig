@@ -29,6 +29,7 @@
   l = log --graph --abbrev-commit --date=relative
   la = !git l --all
   tree = !git la --oneline
+  subup = !git submodule -q foreach git pull -q origin master
 [core]
   excludesfile = /Users/aratak/.gitignore_global
   editor = vim -f

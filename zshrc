@@ -51,9 +51,9 @@ export HISTCONTROL=ignoreboth
 export HISTFILESIZE=1000000000
 export HISTSIZE=1000000
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
-fi
+# if [ -f `brew --prefix`/etc/bash_completion ]; then
+#  . `brew --prefix`/etc/bash_completion
+# fi
 
 alias gitx='gitx --all'
 alias ruby='ruby -rubygems'
@@ -74,4 +74,4 @@ alias ls='ls -F'
 alias ll='ls -l'
 alias refresh="cd && cd ~-"
 
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"

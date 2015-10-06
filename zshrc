@@ -11,6 +11,7 @@ ZSH_THEME="robbyrussell"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias be="bundle exec"
+alias speedtest='speedtest-cli'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -41,7 +42,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:$PATH
 
 export ARCHFLAGS="-arch x86_64"
-export BUNDLER_EDITOR=subl
+export BUNDLER_EDITOR=atom
 
 # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
@@ -74,4 +75,16 @@ alias ls='ls -F'
 alias ll='ls -l'
 alias refresh="cd && cd ~-"
 
+alias dr="bin/dokku-remote"
+
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+export LDFLAGS='-L/usr/local/opt/qt5/lib'
+export CPPFLAGS='-I/usr/local/opt/qt5/include'
+
+export NVM_DIR=~/.nvm
+
+source $(brew --prefix nvm)/nvm.sh
 eval "$(rbenv init - zsh)"

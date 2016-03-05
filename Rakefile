@@ -1,7 +1,7 @@
 require 'fileutils'
 
 def dotfiles
-  %w{gitconfig zshrc gemrc gitignore_global bin}
+  %w{gitconfig zshrc gemrc gitignore_global bin iex.exs}
 end
 
 def source_file_path(filename)

@@ -39,7 +39,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin/:$HOME/.bin:$PATH
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:$HOME/.bin:$PATH
 
 export ARCHFLAGS="-arch x86_64"
 export BUNDLER_EDITOR=atom
@@ -67,7 +67,7 @@ alias gb='git branch'
 alias gco='git checkout'
 alias gk='git kompare'
 alias gst='git status'
-alias gitk='gitk --all'
+alias gti='git'
 
 alias e='subl'
 alias ls='ls -F'
@@ -84,6 +84,8 @@ export LDFLAGS='-L/usr/local/opt/qt5/lib'
 export CPPFLAGS='-I/usr/local/opt/qt5/include'
 
 export NVM_DIR=~/.nvm
+
+eval $(thefuck --alias)
 
 source $(brew --prefix nvm)/nvm.sh
 eval "$(rbenv init - zsh)"

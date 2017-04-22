@@ -10,6 +10,7 @@ ZSH_THEME="robbyrussell"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias git=hub
 alias be="bundle exec"
 alias speedtest='speedtest-cli'
 
@@ -61,18 +62,11 @@ alias ruby='ruby -rubygems'
 alias please='sudo'
 alias docker-env='. docker-env'
 
-# Custom git aliases
-alias ga='git add'
-alias gb='git branch'
-alias gco='git checkout'
-alias gk='git kompare'
-alias gst='git status'
-alias gti='git'
-
 alias e='subl'
 alias ls='ls -F'
 alias ll='ls -l'
 alias refresh="cd && cd ~-"
+unalias gm 
 
 alias dr="bin/dokku-remote"
 
@@ -83,9 +77,9 @@ export LC_ALL=en_US.UTF-8
 export LDFLAGS='-L/usr/local/opt/qt5/lib'
 export CPPFLAGS='-I/usr/local/opt/qt5/include'
 
-export NVM_DIR=~/.nvm
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 
 eval $(thefuck --alias)
 
-source $(brew --prefix nvm)/nvm.sh
 eval "$(rbenv init - zsh)"

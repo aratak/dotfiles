@@ -1,2 +1,5 @@
 ---
-BUNDLE_GIT__ALLOW_INSECURE: "true"
+BUNDLE_BUILD__EVENTMACHINE: "--with-cppflags=-I/usr/local/opt/openssl/include"
+BUNDLE_BUILD__LIBV8: "--with-system-v8"
+BUNDLE_BUILD__THERUBYRACER: "--with-v8-dir=/usr/local/opt/v8-315"
+BUNDLE_GITHUB__HTTPS: "true"

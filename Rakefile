@@ -1,7 +1,15 @@
 require 'fileutils'
 
 def dotfiles
-  %w{gitconfig zshrc gemrc gitignore_global bin iex.exs}
+  {
+    'gitconfig'        => '.gitconfig',
+    'zshrc'            => '.zshrc',
+    'gemrc'            => '.gemrc',
+    'gitignore_global' => '.gitignore_global',
+    'bin'              => '.bin',
+    'iex.exs'          => '.iex.exs',
+    'bundle_config'    => '.bundle/config'
+  }
 end
 
 def source_file_path(filename)
@@ -9,14 +17,14 @@ def source_file_path(filename)
 end
 
 def dotfile_home_path(filename)
-  File.expand_path(".#{filename}", '~')
+  File.expand_path("#{filename}", '~')
 end
 
 task :default => :install
 
 desc "Copy dotfiles to my home directory"
 task :install do
-  dotfiles.each do |filename|
-    ln_s source_file_path(filename), dotfile_home_path(filename), :verbose => true, :force => true
+  dotfiles.each do |source, destination|
+    ln_s source_file_path(source), dotfile_home_path(destination), :verbose => true, :force => true
   end
 end

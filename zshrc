@@ -89,5 +89,3 @@ export NVM_DIR="$HOME/.nvm"
 . $HOME/.asdf/completions/asdf.bash
 
 eval $(thefuck --alias)
-
-eval "$(rbenv init - zsh)"

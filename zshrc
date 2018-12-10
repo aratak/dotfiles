@@ -13,6 +13,7 @@ ZSH_THEME="robbyrussell"
 alias git=hub
 alias be="bundle exec"
 alias speedtest='speedtest-cli'
+alias txt2hex="hexdump -v -e '/1 \"0x%02X \"' ; echo"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -36,6 +37,10 @@ alias speedtest='speedtest-cli'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
+
+function title {
+    echo -ne "\033]0;"$*"\007"
+}
 
 source $ZSH/oh-my-zsh.sh
 
@@ -79,6 +84,9 @@ export CPPFLAGS='-I/usr/local/opt/qt5/include'
 
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
 
 eval $(thefuck --alias)
 

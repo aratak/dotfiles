@@ -3,6 +3,7 @@ require 'fileutils'
 def dotfiles
   {
     'gitconfig'        => '.gitconfig',
+    'asdfrc'            => '.asdfrc',
     'zshrc'            => '.zshrc',
     'gemrc'            => '.gemrc',
     'gitignore_global' => '.gitignore_global',

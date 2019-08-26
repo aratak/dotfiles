@@ -63,7 +63,7 @@ export HISTSIZE=1000000
 # fi
 
 alias gitx='gitx --all'
-alias ruby='ruby -rubygems'
+alias ruby='ruby -r rubygems'
 alias please='sudo'
 alias docker-env='. docker-env'
 
@@ -82,8 +82,7 @@ export LC_ALL=en_US.UTF-8
 export LDFLAGS='-L/usr/local/opt/qt5/lib'
 export CPPFLAGS='-I/usr/local/opt/qt5/include'
 
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+export NODEJS_CHECK_SIGNATURES=no
 
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash

@@ -10,7 +10,6 @@ ZSH_THEME="robbyrussell"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias git=hub
 alias be="bundle exec"
 alias speedtest='speedtest-cli'
 alias txt2hex="hexdump -v -e '/1 \"0x%02X \"' ; echo"
@@ -36,7 +35,7 @@ alias txt2hex="hexdump -v -e '/1 \"0x%02X \"' ; echo"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git gitfast)
 
 function title {
     echo -ne "\033]0;"$*"\007"
@@ -58,10 +57,6 @@ export HISTCONTROL=ignoreboth
 export HISTFILESIZE=1000000000
 export HISTSIZE=1000000
 
-# if [ -f `brew --prefix`/etc/bash_completion ]; then
-#  . `brew --prefix`/etc/bash_completion
-# fi
-
 alias gitx='gitx --all'
 alias ruby='ruby -r rubygems'
 alias please='sudo'
@@ -73,6 +68,7 @@ alias ll='ls -l'
 alias refresh="cd && cd ~-"
 unalias gm 
 
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8

@@ -10,3 +10,5 @@ install tig
 install asdf
 install nginx
 install openssl curl
+install postgres
+install redis

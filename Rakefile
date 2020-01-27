@@ -8,9 +8,9 @@ def dotfiles
     'zshrc'            => '.zshrc',
     'gemrc'            => '.gemrc',
     'gitignore_global' => '.gitignore_global',
-    'bin'              => '.bin',
     'iex.exs'          => '.iex.exs',
-    'bundle_config'    => '.bundle/config'
+    'bundle'           => '.bundle',
+    'zsh'              => '.zsh'
   }
 end
 

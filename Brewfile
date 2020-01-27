@@ -1,5 +1,6 @@
 install git
 link --force git
+install bash-completion
 install qt
 install hub
 install thefuck

@@ -2,8 +2,9 @@ require 'fileutils'
 
 def dotfiles
   {
+    'vscode'           => '.vscode',
     'gitconfig'        => '.gitconfig',
-    'asdfrc'            => '.asdfrc',
+    'asdfrc'           => '.asdfrc',
     'zshrc'            => '.zshrc',
     'gemrc'            => '.gemrc',
     'gitignore_global' => '.gitignore_global',

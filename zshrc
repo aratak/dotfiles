@@ -67,13 +67,12 @@ alias ruby='ruby -r rubygems'
 alias please='sudo'
 alias docker-env='. docker-env'
 
-alias e='subl'
+alias e='code'
 alias ls='ls -F'
 alias ll='ls -l'
 alias refresh="cd && cd ~-"
 unalias gm 
 
-alias dr="bin/dokku-remote"
 
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
@@ -84,7 +83,7 @@ export CPPFLAGS='-I/usr/local/opt/qt5/include'
 
 export NODEJS_CHECK_SIGNATURES=no
 
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-
 eval $(thefuck --alias)
+
+. /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash

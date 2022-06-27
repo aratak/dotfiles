@@ -10,7 +10,6 @@ ZSH_THEME="robbyrussell"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias be="bundle exec"
 alias speedtest='speedtest-cli'
 alias txt2hex="hexdump -v -e '/1 \"0x%02X \"' ; echo"
 
@@ -35,7 +34,9 @@ alias txt2hex="hexdump -v -e '/1 \"0x%02X \"' ; echo"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gitfast)
+plugins=(git gitfast git-open)
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 function title {
     echo -ne "\033]0;"$*"\007"
@@ -79,7 +80,4 @@ export CPPFLAGS='-I/usr/local/opt/qt5/include'
 
 export NODEJS_CHECK_SIGNATURES=no
 
-eval $(thefuck --alias)
-
-. /usr/local/opt/asdf/asdf.sh
-. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+. /opt/homebrew/opt/asdf/libexec/asdf.sh

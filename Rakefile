@@ -10,7 +10,8 @@ def dotfiles
     'gitignore_global' => '.gitignore_global',
     'iex.exs'          => '.iex.exs',
     'bundle'           => '.bundle',
-    'zsh'              => '.zsh'
+    'zsh'              => '.zsh',
+    'githooks'         => '.githooks',
   }
 end
 

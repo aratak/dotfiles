@@ -1,0 +1,173 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "git_panel": {
+    "dock": "right"
+  },
+  "chat_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "assistant": {
+    "enable_experimental_live_diffs": true,
+    "version": "2",
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-4.1"
+    },
+    "inline_assistant_model": {
+      "provider": "copilot_chat",
+      "model": "claude-3-7-sonnet"
+    },
+    "always_allow_tool_actions": true,
+    "commit_message_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4.1-mini"
+    },
+    "notify_when_agent_waiting": "primary_screen"
+  },
+  "language_models": {
+    "openai": {
+      "version": "1",
+      "available_models": [
+        {
+          "name": "o1-mini",
+          "display_name": "o1-mini",
+          "max_tokens": 128000,
+          "max_completion_tokens": 20000
+        }
+      ]
+    }
+  },
+  "lsp": {
+    "ruby-lsp": {
+      "settings": {
+        "use_bundler": true
+      }
+    }
+  },
+  "languages": {
+    "Python": {
+      "formatter": {
+        "language_server": { "name": "ruff" }
+      },
+      "language_servers": ["pyright", "ruff"]
+    },
+    "Rust": {
+      "tab_size": 2,
+      "format_on_save": "on"
+      // "language_servers": ["rust-analyzer"]
+    },
+    "Ruby": {
+      "tab_size": 2,
+      "hard_tabs": false,
+      "format_on_save": "off",
+      "language_servers": ["ruby-lsp", "!solargraph"],
+      "formatter": {
+        "external": {
+          "command": "bundle",
+          "arguments": [
+            "exec",
+            "rubocop",
+            "--server",
+            "--fail-level",
+            "error",
+            "--autocorrect",
+            "--stdin",
+            "corrected.rb",
+            "--stderr"
+          ]
+        }
+      }
+    }
+  },
+  "session": {
+    "restore_unsaved_buffers": true
+  },
+  "features": {
+    "edit_prediction_provider": "copilot" // "zed"
+  },
+  "theme": "Catppuccin Macchiato - No Italics",
+  "ui_font_size": 15,
+  "buffer_font_size": 13,
+  "base_keymap": "SublimeText",
+  "autosave": "on_window_change",
+  "format_on_save": "off",
+  "calls": {
+    "mute_on_join": true
+  },
+  "journal": {
+    "hour_format": "hour24"
+  },
+  "terminal": {
+    "detect_venv": "off"
+    // {
+    //   "on": {
+    //     "activate_script": null,
+    //     "directories": [
+    //       ".env",
+    //       "env",
+    //       ".venv",
+    //       "venv",
+    //       "/Users/aratak/Library/Caches/pypoetry/virtualenvs/"
+    //     ]
+    //   }
+    // }
+  },
+  "tabs": {
+    "file_icons": true
+  },
+  "file_scan_exclusions": [
+    ".bundle",
+    ".venv",
+    ".pytest_cache",
+    "*.log",
+    "**/.windsurfrules",
+    "**/.ruby-lsp",
+    "**/.erb-lint.yml",
+    "**/.rspec",
+    "**/.rubocop.yml",
+    "**/yarn.lock",
+    "**/.ruby-version",
+    "**/.tool-versions",
+    "**/.gitattributes",
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    "**/.vscode",
+    "**/__pycache__",
+    "**/.github",
+    "**/.gitignore",
+    "**/.dockerignore",
+    "**/poetry.lock",
+    "**/pyrightconfig.json",
+    "**/.env*",
+    "**/*.lock",
+    "**/*.egg-info",
+    "**/.ruff_cache",
+    "**/.zed",
+    "**/node_modules/**",
+    "**/.keep"
+  ],
+  "private_files": [
+    "**/.env*",
+    "**/*.pem",
+    "**/*.key",
+    "**/*.cert",
+    "**/*.crt",
+    "**/secrets.yml"
+  ]
+}

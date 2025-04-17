@@ -12,6 +12,8 @@ def dotfiles
     'bundle'           => '.bundle',
     'zsh'              => '.zsh',
     'githooks'         => '.githooks',
+    'zed/keymap.json'  => '.config/zed/keymap.json',
+    'zed/settings.json' => '.config/zed/settings.json',
   }
 end
 

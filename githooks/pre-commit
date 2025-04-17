@@ -1,0 +1,51 @@
+#!/bin/sh
+
+# List of files that are staged for commit (Added or Modified)
+# --diff-filter=AM ensures only added or modified files are listed
+FILES=$(git diff --cached --name-only --diff-filter=AM)
+
+# If no staged files, exit
+[ -z "$FILES" ] && exit 0
+
+STATUS=0
+
+for file in $FILES; do
+  # Skip if the file no longer exists (e.g. deleted)
+  [ ! -f "$file" ] && continue
+
+  # Optional check to skip binary files
+  # For example:
+  # if ! file "$file" | grep -qi text; then
+  #   continue
+  # fi
+
+  # 1. Check for trailing whitespace:
+  # Use grep to find trailing whitespace. If found, fail.
+  if grep -E -q "[[:blank:]]$" "$file"; then
+    echo "Error: Trailing whitespace in $file"
+    STATUS=1
+  fi
+
+  # 2. Check for a newline at the end of the file:
+  # If tail -c 1 gives you a character, then you can check
+  # whether there is a newline or not by seeing if the last
+  # character is '\n'.
+
+  # A quick approach is: if tail -c 1 returns something
+  # AND its output is not '\n', then there's no newline.
+  # Alternatively, we can use file size checks, but this
+  # is simpler:
+  LAST_CHAR=$(tail -c 1 "$file")
+  if [ "$LAST_CHAR" != "" ] && [ "$LAST_CHAR" != $'\n' ]; then
+    echo "Error: No newline at end of $file"
+    STATUS=1
+  fi
+done
+
+if [ $STATUS -ne 0 ]; then
+  echo "Aborting commit due to above errors. Please fix them and try again."
+  exit 1
+fi
+
+# No errors found
+exit 0

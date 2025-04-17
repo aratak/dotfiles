@@ -35,6 +35,7 @@
   editor = vim -f
   autocrlf = false
   safecrlf = true
+  hooksPath = /Users/aratak/.githooks
 [apply]
   whitespace = nowarn
 [format]

@@ -10,8 +10,11 @@ ZSH_THEME="robbyrussell"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias speedtest='speedtest-cli'
 alias txt2hex="hexdump -v -e '/1 \"0x%02X \"' ; echo"
+# alias code="code-insiders"
+alias tig="tig --all"
+alias gti="git"
+alias igt="git"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -42,6 +45,28 @@ function title {
     echo -ne "\033]0;"$*"\007"
 }
 
+function ymlshow {
+    hwatch -t -c bat --style=grid,numbers -f --theme=ansi $*
+}
+
+function hide_python_service_files {
+    cp .zed/hide_settings.json .zed/settings.json
+}
+
+function show_python_service_files {
+    cp .zed/show_settings.json .zed/settings.json
+}
+
+function hide_icons {
+    defaults write com.apple.finder CreateDesktop false
+    killall Finder
+}
+
+function show_icons {
+    defaults write com.apple.finder CreateDesktop true
+    killall Finder
+}
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -67,17 +92,33 @@ alias e='code'
 alias ls='ls -F'
 alias ll='ls -l'
 alias refresh="cd && cd ~-"
-unalias gm 
+unalias gm
 
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-export LDFLAGS='-L/usr/local/opt/qt5/lib'
-export CPPFLAGS='-I/usr/local/opt/qt5/include'
+export LDFLAGS="-L/opt/homebrew/opt/qt@5/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/qt@5/include"
+export PATH="/opt/homebrew/opt/qt@5/bin:$PATH"
 
 export NODEJS_CHECK_SIGNATURES=no
+# export NODE_OPTIONS=--openssl-legacy-provider
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+. $(brew --prefix)/opt/asdf/libexec/asdf.sh
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/aratak/.lmstudio/bin"
+
+# Added by Windsurf
+export PATH="/Users/aratak/.codeium/windsurf/bin:$PATH"
+
+# Added by UV
+eval "$(uv generate-shell-completion zsh)"
+
+# libpq is required for pg gem
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"

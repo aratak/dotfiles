@@ -1,6 +1,11 @@
 .DS_Store
 *~
+/.bundle
+/pyrightconfig.json
 /.idea
 /nbproject
 .project
 /.vscode
+/hide-files.json
+/.ruff_cache
+/.bundle/config

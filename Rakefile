@@ -9,9 +9,9 @@ def dotfiles
     'gemrc'            => '.gemrc',
     'gitignore_global' => '.gitignore_global',
     'iex.exs'          => '.iex.exs',
-    'bundle'           => '.bundle',
-    'zsh'              => '.zsh',
-    'githooks'         => '.githooks',
+    'bundle/'          => '.bundle/',
+    'zsh/'             => '.zsh/',
+    'githooks/'        => '.githooks/',
     'zed/keymap.json'  => '.config/zed/keymap.json',
     'zed/settings.json' => '.config/zed/settings.json',
   }
